@@ -6,16 +6,7 @@ const path = require("path");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, DB_DEPLOY } =
   process.env;
 
-// const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
-//   logging: false, // true para ver logs de creacion de tablas y otros
-//   host: DB_HOST,
-//   dialect: "mysql",
-//   port: DB_PORT,
-//   // dialectOptions: {
-//   //   mysql2: "^2.3.3",
-//   // },
-// });
-const sequelize = new Sequelize(DB_DEPLOY, {
+const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   logging: false, // true para ver logs de creacion de tablas y otros
   host: DB_HOST,
   dialect: "mysql",
@@ -24,7 +15,16 @@ const sequelize = new Sequelize(DB_DEPLOY, {
   //   mysql2: "^2.3.3",
   // },
 });
-
+// const sequelize = new Sequelize(DB_DEPLOY, {
+//   logging: false, // true para ver logs de creacion de tablas y otros
+//   host: DB_HOST,
+//   dialect: "mysql",
+//   port: DB_PORT,
+//   // dialectOptions: {
+//   //   mysql2: "^2.3.3",
+//   // },
+// });
+//!apiticketupcode-production.up.railway.app
 const basename = path.basename(__filename);
 
 const modelDefiners = [];

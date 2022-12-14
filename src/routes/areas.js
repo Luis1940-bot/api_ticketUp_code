@@ -2,11 +2,12 @@ const { Router } = require("express");
 const express = require("express");
 const db = require("../db.js");
 const router = Router();
+router.use(express.json());
 const bcrypt = require("bcrypt");
 const whiteList = [""]; //["http://localhost:3001/api/get_areas"];
 const cors = require("cors");
 router.use(cors({ origin: whiteList }));
-router.use(express.json());
+
 // router.use(
 //   express.urlencoded({
 //     extended: true,
@@ -52,10 +53,6 @@ router.get("/get_areas", async (req, res) => {
   } catch (error) {
     res.status(400).send(error);
   }
-});
-
-router.post("/hola", async (req, res) => {
-  res.send("entroooooooooooooooooo");
 });
 
 module.exports = router;

@@ -2,7 +2,7 @@ const { Router } = require("express");
 const express = require("express");
 const db = require("../db.js");
 const router = Router();
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 router.use(express.json());
 const cors = require("cors");
 router.use(cors());

@@ -24,7 +24,7 @@ const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
 //   //   mysql2: "^2.3.3",
 //   // },
 // });
-//!apiticketupcode-production.up.railway.app
+//!apiticketupcode-production-0f30.up.railway.app
 const basename = path.basename(__filename);
 
 const modelDefiners = [];

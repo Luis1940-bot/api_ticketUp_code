@@ -2,7 +2,7 @@ const { Router } = require("express");
 const express = require("express");
 const db = require("../db.js");
 const router = Router();
-//const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 router.use(express.json());
 const cors = require("cors");
 router.use(cors());
@@ -16,7 +16,7 @@ router.post("/alta_area", async (req, res) => {
   try {
     const { area, datetime } = req.body;
 
-    const integrity = area + datetime; //bcrypt.hashSync(area + datetime, 10);
+    const integrity = bcrypt.hashSync(area + datetime, 10);
     const [areaCreated, created] = await db.Areas.findOrCreate({
       where: {
         area: area.toLowerCase(),

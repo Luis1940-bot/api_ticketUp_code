@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Luis1940-bot/api_ticketUp.git"
+    "url": "git+https://github.com/Luis1940-bot/api_ticketUp_code.git"
   },
   "author": "Luis Gimenez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Luis1940-bot/api_ticketUp/issues"
+    "url": "https://github.com/Luis1940-bot/api_ticketUp_code/issues"
   },
-  "homepage": "https://github.com/Luis1940-bot/api_ticketUp#readme",
+  "homepage": "https://github.com/Luis1940-bot/api_ticketUp_code#readme",
   "dependencies": {
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",

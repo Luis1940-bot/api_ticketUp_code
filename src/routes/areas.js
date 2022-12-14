@@ -13,7 +13,8 @@ router.use(express.json());
 //   })
 // );
 
-router.post("/alta_area", async (req, res, next) => {
+router.post("/alta_area", async (req, res) => {
+  res.send("entroooooooooooooooo");
   try {
     const { area, datetime } = req.body;
 

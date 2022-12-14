@@ -3,7 +3,7 @@ const express = require("express");
 const db = require("../db.js");
 const router = Router();
 const bcrypt = require("bcrypt");
-const whiteList = ["http://localhost:3001/api/get_areas"];
+const whiteList = [""]; //["http://localhost:3001/api/get_areas"];
 const cors = require("cors");
 router.use(cors({ origin: whiteList }));
 router.use(express.json());

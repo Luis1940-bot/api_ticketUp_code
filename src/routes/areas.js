@@ -39,7 +39,6 @@ router.post("/alta_area", async (req, res) => {
 });
 
 router.get("/get_areas", async (req, res) => {
-  res.send("entroooooooooooooo");
   try {
     const areas = await db.Areas.findAll({
       raw: true,
@@ -53,6 +52,10 @@ router.get("/get_areas", async (req, res) => {
   } catch (error) {
     res.status(400).send(error);
   }
+});
+
+router.post("/hola", async (req, res) => {
+  res.send("entroooooooooooooooooo");
 });
 
 module.exports = router;

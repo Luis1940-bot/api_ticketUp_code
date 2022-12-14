@@ -16,7 +16,7 @@ router.post("/alta_area", async (req, res) => {
   try {
     const { area, datetime } = req.body;
 
-    const integrity = bcrypt.hashSync(area + datetime, 10);
+    const integrity = area + datetime; //bcrypt.hashSync(area + datetime, 10);
     const [areaCreated, created] = await db.Areas.findOrCreate({
       where: {
         area: area.toLowerCase(),

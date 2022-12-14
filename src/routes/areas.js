@@ -14,7 +14,6 @@ router.use(express.json());
 // );
 
 router.post("/alta_area", async (req, res) => {
-  res.send("entroooooooooooooooo");
   try {
     const { area, datetime } = req.body;
 
@@ -40,6 +39,7 @@ router.post("/alta_area", async (req, res) => {
 });
 
 router.get("/get_areas", async (req, res) => {
+  res.send("entroooooooooooooo");
   try {
     const areas = await db.Areas.findAll({
       raw: true,

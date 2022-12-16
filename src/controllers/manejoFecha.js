@@ -21,6 +21,7 @@ function fecha_Actual() {
 
 function fechaActual_dd_mm_yyyy() {
   let fecha = new fecha_Actual();
+
   return fecha.hoyNormal;
 }
 
@@ -29,43 +30,65 @@ function fechaActual_yyyy_mm_dd() {
   return fecha.hoyMySQL;
 }
 function fecha_dd_mm_yyyy(datex) {
-  let day = datex.getUTCDate();
-  let month = datex.getUTCMonth() + 1;
-  let year = datex.getUTCFullYear();
+  let day = new Date(datex);
+  day = day.getUTCDate();
+  let month = new Date(datex);
+  month = month.getUTCMonth() + 1;
+  let year = new Date();
+  year = year.getUTCFullYear();
+
   day < 10 ? (day = "0" + day) : null;
   month < 10 ? (month = "0" + month) : null;
   return day + "-" + month + "-" + year;
 }
 function fecha_yyyy_mm_dd(datex) {
-  let day = datex.getUTCDate();
-  let month = datex.getUTCMonth() + 1;
-  let year = datex.getUTCFullYear();
+  let day = new Date(datex);
+  day = day.getUTCDate();
+  let month = new Date(datex);
+  month = month.getUTCMonth() + 1;
+  let year = new Date();
+  year = year.getUTCFullYear();
+  let hour = new Date();
+
   day < 10 ? (day = "0" + day) : null;
   month < 10 ? (month = "0" + month) : null;
   return year + "-" + month + "-" + day;
 }
 
 function fecha_yyyy_mm_dd_hh(datex) {
-  let day = datex.getUTCDate();
-  let month = datex.getUTCMonth() + 1;
-  let year = datex.getUTCFullYear();
-  let hour = datex.getUTCHours();
-  let min = datex.getUTCMinutes();
-  let sec = datex.getUTCSeconds();
+  let day = new Date(datex);
+  day = day.getUTCDate();
+  let month = new Date(datex);
+  month = month.getUTCMonth() + 1;
+  let year = new Date();
+  year = year.getUTCFullYear();
+  let hour = new Date();
+  hour = hour.getUTCHours();
+  let min = new Date();
+  min = min.getUTCMinutes();
+  let sec = new Date();
+  sec = sec.getUTCSeconds();
   day < 10 ? (day = "0" + day) : null;
   month < 10 ? (month = "0" + month) : null;
   hour < 10 ? (hour = "0" + hour) : null;
   min < 10 ? (min = "0" + min) : null;
   sec < 10 ? (sec = "0" + sec) : null;
+
   return year + "-" + month + "-" + day + " " + hour + ":" + min + ":" + sec;
 }
 function fecha_dd_mm_yyyy_hh(datex) {
-  let day = datex.getUTCDate();
-  let month = datex.getUTCMonth() + 1;
-  let year = datex.getUTCFullYear();
-  let hour = datex.getUTCHours();
-  let min = datex.getUTCMinutes();
-  let sec = datex.getUTCSeconds();
+  let day = new Date(datex);
+  day = day.getUTCDate();
+  let month = new Date(datex);
+  month = month.getUTCMonth() + 1;
+  let year = new Date();
+  year = year.getUTCFullYear();
+  let hour = new Date();
+  hour = hour.getUTCHours();
+  let min = new Date();
+  min = min.getUTCMinutes();
+  let sec = new Date();
+  sec = sec.getUTCSeconds();
   day < 10 ? (day = "0" + day) : null;
   month < 10 ? (month = "0" + month) : null;
   hour < 10 ? (hour = "0" + hour) : null;

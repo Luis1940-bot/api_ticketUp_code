@@ -33,16 +33,17 @@ router.post("/alta_users", async (req, res) => {
       password,
       email,
       phone,
-      area,
       funcion,
+      area,
       fecha_nacimiento,
     } = req.body;
+
     const hash = bcrypt.hashSync(password, 10);
     const integrity =
       email.toLowerCase() +
       hash +
       name.toLowerCase() +
-      manejoFechas.fecha_yyyy_mm_dd_hh(userFound.datetime);
+      manejoFechas.fecha_yyyy_mm_dd_hh(datetime);
 
     const [userCreated, created] = await db.Users.findOrCreate({
       where: {
@@ -67,7 +68,7 @@ router.post("/alta_users", async (req, res) => {
             )?.id
           : null,
         fecha_nacimiento: fecha_nacimiento,
-        datetime: manejoFechas.fecha_yyyy_mm_dd_hh(userFound.datetime),
+        datetime: manejoFechas.fecha_yyyy_mm_dd_hh(datetime),
         integrity: integrity,
       },
     });
